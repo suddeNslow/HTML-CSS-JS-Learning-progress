@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="header">
       <img
         src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
         id="header-img"
-        width="200"
+        class="banner"
       />
-
+      <div class="empty-space"></div>
       <nav id="nav-bar">
-        <ul>
+        <ul class="nav-ul">
           <li>
             <a class="nav-link" href="#features"> Features </a>
           </li>
@@ -29,9 +31,9 @@
       </nav>
     </header>
     <main>
-      <section id="hero">
+      <section id="hero" class="hero">
         <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <h2>crafted, home-made masterpieces</h2>
+          <h2>Handcrafted, home-made masterpieces</h2>
           <input
             name="email"
             id="email"
@@ -43,7 +45,44 @@
         </form>
       </section>
 
-      <section id="features"></section>
+      <section id="features" class="features">
+        <section class="feature-grid">
+          <div class="icon">
+            <i class="fa-solid fa-fire-flame-curved fa-3x"></i>
+          </div>
+          <div class="feature-description">
+            <h2>Premium Materials</h2>
+            <p>
+              Our trombones use the shiniest brass which is sourced locally.
+              This will increase the longevity of your purchase.
+            </p>
+          </div>
+        </section>
+        <section class="feature-grid">
+          <div class="icon">
+            <i class="fa-solid fa-truck fa-3x"></i>
+          </div>
+          <div class="feature-description">
+            <h2>Fast Shipping</h2>
+            <p>
+              We make sure you recieve your trombone as soon as we have finished
+              making it. We also provide free returns if you are not satisfied.
+            </p>
+          </div>
+        </section>
+        <section class="feature-grid">
+          <div class="icon">
+            <i class="fa-solid fa-battery-full fa-3x"></i>
+          </div>
+          <div class="feature-description">
+            <h2>Quality Assurance</h2>
+            <p>
+              For every purchase you make, we will ensure there are no damages
+              or faults and we will check and test the pitch of your instrument.
+            </p>
+          </div>
+        </section>
+      </section>
 
       <section id="how_it_works">
         <iframe
@@ -56,7 +95,45 @@
         ></iframe>
       </section>
 
-      <section id="pricing"></section>
+      <section id="pricing" class="pricing">
+        <div class="product">
+          <div class="level">TENOR TROMBONE</div>
+          <h2>$600</h2>
+          <ol>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+
+        <div class="product">
+          <div class="level">TENOR TROMBONE</div>
+          <h2>$600</h2>
+          <ol>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+
+        <div class="product">
+          <div class="level">TENOR TROMBONE</div>
+          <h2>$600</h2>
+          <ol>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+      </section>
+
+      <footer></footer>
     </main>
   </body>
 </html>
