@@ -1,17 +1,21 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 :root {
   --nav-color: #023c40;
   --nav-color-gradient: #012528;
   --secondary-color: #f78e69;
-  --welcome-color: #503d3f;
-  --welcome-color-gradient: #2e2325;
-  --background-color: #4effef;
+  --welcome-color: #564238;
+  --welcome-color-gradient: #3e2f28;
+  --background-color: #30c5ff;
+  --background-color-gradient: #00648f;
   --text-color: #fffafb;
 }
+
+/*Navbar section*/
 
 .navbar {
   /*Display stuff*/
@@ -48,19 +52,93 @@
 }
 
 .navbar a:hover {
-  background-color: antiquewhite;
+  background-color: #036e77;
 }
+
+/*Welcome section*/
 
 .welcome-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100svh;
   color: var(--text-color);
   background: linear-gradient(
     45deg,
     var(--welcome-color),
     var(--welcome-color-gradient)
   );
+}
+
+.welcome-section h1 {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.welcome-section h2 {
+  font-size: 25px;
+  margin: 10px 0;
+  color: #036e77;
+}
+
+/*Project section*/
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(
+    45deg,
+    var(--background-color),
+    var(--background-color-gradient)
+  );
+}
+
+.project-header {
+  font-size: 35px;
+  max-width: 700px;
+  margin-bottom: 100px;
+  border-bottom: 0.2rem solid var(--text-color);
+  color: var(--text-color);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project-tile {
+  background-color: var(--nav-color);
+  text-decoration: none;
+  box-shadow: 3px 3px 3px #111111;
+}
+
+.project-image {
+  height: calc(100% - 7rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  font-size: 1.7rem;
+  padding: 2rem 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.code {
+  color: var(--nav-color);
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code {
+  color: #ff7f50;
 }
