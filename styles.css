@@ -133,7 +133,7 @@
 }
 
 .project-text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   padding: 2rem 0.5rem;
   color: var(--text-color);
   text-align: center;
@@ -260,18 +260,20 @@
   }
 
   .project-tile {
-    max-width: 300px;
     margin: 0 auto;
   }
 
   .project-image {
-    height: auto;
-    max-height: 200px;
+    height: calc(100% - 5rem);
   }
 
   .project-text {
     font-size: 1rem;
     padding: 1rem;
+  }
+
+  .code {
+    display: none; /* Hide the .code elements on mobile */
   }
 
   .contact-section {
@@ -297,5 +299,12 @@
     font-size: 0.8rem; /* Smaller tooltip text */
     padding: 5px; /* Reduce padding */
     white-space: normal; /* Allow wrapping of long text */
+  }
+}
+
+@media (max-width: 542px) {
+  .project-text {
+    font-size: 1.5rem;
+    padding: 1rem;
   }
 }
