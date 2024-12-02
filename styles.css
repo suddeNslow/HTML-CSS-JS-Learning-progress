@@ -143,7 +143,7 @@
   text-decoration: none;
   box-shadow: 3px 3px 3px #111111;
   overflow: hidden;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -312,15 +312,30 @@
 
   .project-tile {
     margin: 0 auto;
+    transition: none;
   }
 
   .project-image {
     height: calc(100% - 5rem);
+    transition: none;
   }
 
   .project-text {
     font-size: 1rem;
     padding: 1rem;
+  }
+
+  .project-description {
+    transition: none;
+  }
+
+  .project-tile:hover {
+    height: 400px;
+  }
+
+  .project-tile:hover .project-description {
+    opacity: 0;
+    height: 0;
   }
 
   .code {
