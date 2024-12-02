@@ -27,6 +27,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
   /*Box model stuff*/
   width: 100%;
   height: 75px;
@@ -124,24 +125,57 @@
   background-color: var(--nav-color);
   text-decoration: none;
   box-shadow: 3px 3px 3px #111111;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  height: 400px;
+  max-height: 500px;
 }
 
 .project-image {
-  height: calc(100% - 7rem);
+  height: 300px;
   width: 100%;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
 }
 
 .project-text {
   font-size: 1.5rem;
-  padding: 2rem 0.5rem;
+  padding: 1rem 0.5rem;
   color: var(--text-color);
   text-align: center;
 }
 
+.project-description {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  text-align: center;
+  overflow: hidden;
+  max-height: 0; /* Initially hidden */
+  opacity: 0; /* Initially invisible */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  margin: 5px 20px;
+}
+
+.project-tile:hover {
+  height: fit-content; /* Increase padding on hover */
+  max-height: 600px; /* Increase max-height to allow the description to expand */
+}
+
+.project-tile:hover .project-description {
+  max-height: 200px; /* Allow text to expand */
+  opacity: 1; /* Fade in text */
+}
+
 .code {
   color: var(--nav-color);
-  transition: color 0.3s ease-out;
+  transition: color 0.5s ease-out;
 }
 
 .project-tile:hover .code {
